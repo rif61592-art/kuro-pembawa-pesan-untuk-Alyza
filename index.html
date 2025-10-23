@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selamat Ulang Tahun 🎂</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffc0cb, #ffb6c1, #fff0f5);
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    h1, h2, h3 { text-align: center; }
+    .hidden { display: none; }
+
+    /* ===== ANIMASI KURO ===== */
+    #intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #ffdde1, #ee9ca7);
+      animation: fadeIn 1s ease-in;
+      overflow: hidden;
+    }
+
+    #kuro {
+      width: 200px;
+      animation: moveKuro 3s infinite ease-in-out;
+    }
+
+    @keyframes moveKuro {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    #intro-text {
+      font-size: 1.2em;
+      margin-top: 20px;
+      background: white;
+      padding: 15px 25px;
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to { opacity: 0; transform: scale(0.9); }
+    }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      background: #ff80ab;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-shadow: 0 0 8px white;
+    }
+
+    /* ===== SECTION ===== */
+    section {
+      padding: 30px 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .profile {
+      text-align: center;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ff99cc;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .message-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .message-box:hover {
+      transform: scale(1.05);
+    }
+
+    button {
+      background: #ff80ab;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff4081;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ===== BALON ===== */
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 40px;
+      height: 55px;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--color));
+      animation: floatUp linear infinite;
+      z-index: 5;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0) rotate(0deg); opacity: 1; }
+      to { transform: translateY(-110vh) rotate(10deg); opacity: 0; }
+    }
+
+    .string {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 30px;
+      background: #aaa;
+      transform: translateX(-50%);
+    }
+
+    /* ===== KONFETI ===== */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: var(--color);
+      top: 0;
+      left: 0;
+      opacity: 0.8;
+      animation: fall linear forwards;
+      z-index: 10;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- INTRO ANIMASI KURO -->
+  <div id="intro">
+    <img id="kuro" src="c:\Users\rifqi\Downloads\dreamina-2025-10-23-3765-messenger turtle.jpeg" alt="Kuro sang kura-kura">
+    <div id="intro-text">Hay aku Kuro 🐢, kura-kura pembawa pesan... <br> Ada pesan untukmu 💌</div>
+  </div>
+
+  <!-- KONTEN UTAMA -->
+  <div id="main" class="hidden">
+
+    <nav>
+      <a href="#profil">Profil</a>
+      <a href="#about">Tentang</a>
+      <a href="#ucapan">Ucapan</a>
+      <a href="#musik">Musik</a>
+    </nav>
+
+    <section id="profil" class="profile">
+      <h2>🎀 Profil Ulang Tahun 🎀</h2>
+      <img src="c:\Users\rifqi\OneDrive\tugas kampus\画像\Screenshot\Cuplikan layar 2025-10-23 212023.png" alt="Foto Ulang Tahun">
+      <h3>Nama: Alyza 💖</h3>
+      <p>Tanggal Lahir: 24 Oktober 🎂</p>
+      <p>Zodiak: Scorpio ♏</p>
+    </section>
+
+    <section id="about">
+      <h2>💗 Tentang Hari Ini 💗</h2>
+      <p>Hari ini adalah hari spesial! 🌸  
+         Dunia menjadi lebih cerah karena kamu lahir.  
+         Semoga hari ulang tahunmu penuh cinta, tawa, dan kebahagiaan tanpa akhir 💕 
+        Terus lah berkembang dan bersinar.</p>
+    </section>
+
+    <section id="ucapan">
+      <h2>💝 Pesan dan Harapan 💝</h2>
+      <div class="message-box" id="message-box">
+        Klik tombol di bawah ini untuk melihat ucapan rahasia ✨
+        klik lagi untuk ucapan selanjutnya   
+      </div>
+      <center><button id="show-message">🎁 Lihat Ucapan</button></center>
+    </section>
+
+    <section id="musik">
+      <h2>🎶 Musik Ulang Tahun 🎶</h2>
+      <center>
+        <audio controls autoplay loop>
+          <source src="c:\Users\rifqi\Downloads\ssstik.io_1761230750528.mp3" type="audio/mp3">
+          Browser kamu tidak mendukung audio.
+        </audio>
+      </center>
+    </section>
+
+    <footer>
+      Dibuat dengan 💖 oleh Kuro sang Kura-Kura & Tuan kuro 🐢✨
+    </footer>
+  </div>
+
+  <script>
+    // ===== ANIMASI AWAL KURO =====
+    setTimeout(() => {
+      document.getElementById('intro').style.animation = 'fadeOut 1s forwards';
+      setTimeout(() => {
+        document.getElementById('intro').style.display = 'none';
+        document.getElementById('main').classList.remove('hidden');
+        startBalloons();
+        startConfetti();
+      }, 1000);
+    }, 4000);
+
+    // ===== UCAPAN =====
+    const btn = document.getElementById('show-message');
+    const box = document.getElementById('message-box');
+    const messages = [
+      "Selamat ulang tahun! 🌸 Semoga semua impianmu tercapai!",
+      "Hari ini istimewa karena kamu lahir 💖",
+      "Semoga hidupmu penuh kebahagiaan dan warna pink seperti situs ini 💕",
+      "Teruslah bersinar dan menjadi dirimu sendiri!",
+      "jadilah pribadi yang selalu membawa keceriaan bagi orang lain",
+      "ku harap keperibadian mu menjadi lebih baik...",
+      "Kuro berpesan: jangan lupa tersenyum hari ini 🐢✨"
+    ];
+    let index = 0;
+    btn.addEventListener('click', () => {
+      box.textContent = messages[index];
+      index = (index + 1) % messages.length;
+    });
+
+    // ===== BALON =====
+    function startBalloons() {
+      const colors = ['#ff69b4', '#ff1493', '#ffc0cb', '#ffb6c1', '#ffa6c9'];
+      setInterval(() => {
+        const balloon = document.createElement('div');
+        const string = document.createElement('div');
+        balloon.classList.add('balloon');
+        string.classList.add('string');
+        balloon.appendChild(string);
+        balloon.style.left = Math.random() * 100 + 'vw';
+        balloon.style.animationDuration = (5 + Math.random() * 5) + 's';
+        balloon.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
+        document.body.appendChild(balloon);
+        setTimeout(() => balloon.remove(), 10000);
+      }, 500);
+    }
+
+    // ===== KONFETI =====
+    function startConfetti() {
+      const colors = ['#ff80ab', '#ffb6c1', '#ff69b4', '#fff', '#ffd1dc'];
+      for (let i = 0; i < 120; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        confetti.style.left = Math.random() * 100 + 'vw';
+        confetti.style.animationDuration = (3 + Math.random() * 3) + 's';
+        confetti.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.remove(), 4000);
+      }
+    }
+  </script>
+
+</body>
+</html>
